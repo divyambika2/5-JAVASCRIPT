@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>JavaScript Functions</title>
+        <script>
+            // User Validations
+            function loginValidation(){
+                // Divya
+                var uname=document.myform.username.value;
+                // divya@234
+                var password=document.myform.password.value;
+                if(uname==null || uname==""){
+                    alert("Name can't be blank")
+                    return false;
+                }
+                else if(password.length<6){
+                    alert("Password Must be 6 letters")
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>LOGIN PAGE</h2> 
+        <form name="myform" action="Loginsuccess.html" onsubmit="return loginValidation(this)">
+        User Name:<input type="text" name="username"><br>
+        Password:<input type="password" name="password"><br>
+           <input type="Submit" value="Submit"></body>
+        </form>
+</html>
